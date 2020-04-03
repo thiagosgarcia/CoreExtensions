@@ -2,7 +2,7 @@
 using System.Reflection;
 using System.Runtime.Remoting.Messaging;
 
-namespace ProxyLogger.Helpers
+namespace PenguinSoft.ProxyLogger.Helpers
 {
     public class ExceptionArgs : EventArgs
     {

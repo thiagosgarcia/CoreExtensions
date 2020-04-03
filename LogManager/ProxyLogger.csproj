@@ -9,9 +9,9 @@
     <Description>
       A generic logger to trace any public method from any class in your application without a single line of code using Serilog.
     </Description>
-    <AssemblyVersion>1.0.1.0</AssemblyVersion>
-    <FileVersion>1.0.1.0</FileVersion>
-    <Version>1.0.1</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Version>1.0.0</Version>
     <AssemblyName />
     <Authors>tgarcia</Authors>
     <PackageReleaseNotes></PackageReleaseNotes>
@@ -20,6 +20,11 @@
 
   <PropertyGroup>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/thiagosgarcia/CoreExtensions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/thiagosgarcia/CoreExtensions</PackageProjectUrl>
+    <PackageId>PenguinSoft.ProxyLogger</PackageId>
+    <RootNamespace>PenguinSoft.ProxyLogger</RootNamespace>
+    <PackageIcon>arau.jpg</PackageIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -34,5 +39,12 @@
 
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\arau.jpg">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>

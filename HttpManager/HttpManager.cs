@@ -11,10 +11,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using ProxyLogger.Interface;
-using ProxyLogger.Logger;
+using PenguinSoft.ProxyLogger.Logger;
 
-namespace HttpManager
+namespace PenguinSoft.HttpManager
 {
     public class HttpManager : IHttpManager
     {
@@ -211,8 +210,7 @@ namespace HttpManager
             return resource;
         }
 
-        #region GET
-        private Task<HttpResponseMessage> InternalGet(string resource,
+                private Task<HttpResponseMessage> InternalGet(string resource,
             IDictionary<string, string> headers, string baseUrl,
             IDictionary<string, string> queryParams, bool throwOnError, string mediaType)
                 => PerformAction(HttpMethod.Get, resource, null, headers, baseUrl, queryParams, throwOnError, mediaType);
@@ -234,9 +232,7 @@ namespace HttpManager
             var result = await InternalGet(resource, headers, baseUrl, queryParams, true, mediaType);
             return await result.Content.ReadAsStreamAsync();
         }
-        #endregion
-        #region POST
-
+                
         private Task<HttpResponseMessage> InternalPost(string resource, dynamic obj,
             IDictionary<string, string> headers, string baseUrl,
             IDictionary<string, string> queryParams, bool throwOnError, string mediaType)
@@ -262,9 +258,7 @@ namespace HttpManager
             string baseUrl = null, IDictionary<string, string> queryParams = null, string mediaType = null)
                 => InternalPost(resource, obj, headers, baseUrl, queryParams, false, mediaType);
 
-        #endregion
-        #region PUT
-        private Task<HttpResponseMessage> InternalPut(string resource, dynamic obj,
+                        private Task<HttpResponseMessage> InternalPut(string resource, dynamic obj,
             IDictionary<string, string> headers, string baseUrl,
             IDictionary<string, string> queryParams, bool throwOnError, string mediaType)
                 => PerformAction(HttpMethod.Put, resource, obj, headers, baseUrl, queryParams, throwOnError, mediaType);
@@ -289,9 +283,7 @@ namespace HttpManager
             string baseUrl = null, IDictionary<string, string> queryParams = null, string mediaType = null)
                 => InternalPut(resource, obj, headers, baseUrl, queryParams, false, mediaType);
 
-        #endregion
-        #region PATCH
-        private Task<HttpResponseMessage> InternalPatch(string resource, dynamic obj,
+                        private Task<HttpResponseMessage> InternalPatch(string resource, dynamic obj,
             IDictionary<string, string> headers, string baseUrl,
             IDictionary<string, string> queryParams, bool throwOnError, string mediaType)
                 => PerformAction(new HttpMethod("PATCH"), resource, obj, headers, baseUrl, queryParams, throwOnError, mediaType);
@@ -316,9 +308,7 @@ namespace HttpManager
             string baseUrl = null, IDictionary<string, string> queryParams = null, string mediaType = null)
                 => InternalPatch(resource, obj, headers, baseUrl, queryParams, false, mediaType);
 
-        #endregion
-        #region FILE
-
+                
         public Task<HttpResponseMessage> PostFileAsync(string resource, IEnumerable<IFormFile> files,
             string baseUrl = null, Dictionary<string, string> queryParams = null, IEnumerable<HttpContent> additionalContent = null)
         {
@@ -351,9 +341,7 @@ namespace HttpManager
             return PostFileAsync(resource, null, baseUrl, queryParams, multipartContent);
         }
 
-        #endregion
-        #region DELETE
-
+                
         public Task<HttpResponseMessage> DeleteAsync(string resource, string baseUrl = null, IDictionary<string, string> headers = null)
         {
             var baseAddress = baseUrl ?? DefaultBaseUrl;
@@ -361,34 +349,27 @@ namespace HttpManager
             SetHeaders(requestMessage, baseAddress, headers);
             return SendAsync(baseAddress, requestMessage);
         }
-        #endregion
-
-        #region OPTIONS
-        public Task<HttpResponseMessage> OptionsAsync(string resource, string baseUrl = null, IDictionary<string, string> headers = null)
+        
+                public Task<HttpResponseMessage> OptionsAsync(string resource, string baseUrl = null, IDictionary<string, string> headers = null)
         {
             var baseAddress = baseUrl ?? DefaultBaseUrl;
             var requestMessage = new HttpRequestMessage(HttpMethod.Options, resource);
             SetHeaders(requestMessage, baseAddress, headers);
             return SendAsync(baseAddress, requestMessage);
         }
-        #endregion
-        #region HEAD
-        public Task<HttpResponseMessage> HeadAsync(string resource, string baseUrl = null, IDictionary<string, string> headers = null)
+                        public Task<HttpResponseMessage> HeadAsync(string resource, string baseUrl = null, IDictionary<string, string> headers = null)
         {
             var baseAddress = baseUrl ?? DefaultBaseUrl;
             var requestMessage = new HttpRequestMessage(HttpMethod.Head, resource);
             SetHeaders(requestMessage, baseAddress, headers);
             return SendAsync(baseAddress, requestMessage);
         }
-        #endregion
-        #region TRACE
-        public Task<HttpResponseMessage> TraceAsync(string resource, string baseUrl = null, IDictionary<string, string> headers = null)
+                        public Task<HttpResponseMessage> TraceAsync(string resource, string baseUrl = null, IDictionary<string, string> headers = null)
         {
             var baseAddress = baseUrl ?? DefaultBaseUrl;
             var requestMessage = new HttpRequestMessage(HttpMethod.Trace, resource);
             SetHeaders(requestMessage, baseAddress, headers);
             return SendAsync(baseAddress, requestMessage);
         }
-        #endregion
-    }
+            }
 }

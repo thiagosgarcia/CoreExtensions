@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Configuration;
 
-namespace HttpManager
+namespace PenguinSoft.HttpManager
 {
     public static class ProxyHelper
     {

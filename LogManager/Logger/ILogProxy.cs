@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Serilog.Events;
 
-namespace ProxyLogger.Logger
+namespace PenguinSoft.ProxyLogger.Logger
 {
 
     public interface ILogProxy<T>

@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using ProxyLogger.Logger;
+using PenguinSoft.ProxyLogger.Logger;
 
-namespace ProxyLogger.Helpers
+namespace PenguinSoft.ProxyLogger.Helpers
 {
     public static class DynamicProxyExtensions
     {

@@ -1,17 +1,13 @@
 ﻿using System;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
-using ProxyLogger.Helpers;
+using PenguinSoft.ProxyLogger.Helpers;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
-using ILogger = ProxyLogger.Logger.ILogger;
 
-namespace ProxyLogger.Logger
+namespace PenguinSoft.ProxyLogger.Logger
 {
-    /// <summary>
-    /// SeriLogger logging implementation
-    /// </summary>
     public class SeriLogger : ILogger, IDisposable
     {
         private readonly IHttpContextAccessor _contextAccessor;

@@ -6,10 +6,10 @@ using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
-using ProxyLogger.Helpers;
+using PenguinSoft.ProxyLogger.Helpers;
 using Serilog.Events;
 
-namespace ProxyLogger.Logger
+namespace PenguinSoft.ProxyLogger.Logger
 {
 
     public class DispatchLoggingProxy<T> : DispatchProxy, ILogProxy<T>

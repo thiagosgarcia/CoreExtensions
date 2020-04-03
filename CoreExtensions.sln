@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpManager", "HttpManager\HttpManager.csproj", "{40167B55-B390-4FA4-A53C-DED4D1657466}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpManager", "HttpManager\HttpManager.csproj", "{40167B55-B390-4FA4-A53C-DED4D1657466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProxyLogger", "LogManager\ProxyLogger.csproj", "{440981A2-2828-4DF3-B9CF-F987827995D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProxyLogger", "LogManager\ProxyLogger.csproj", "{440981A2-2828-4DF3-B9CF-F987827995D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpCacheManager", "HttpCacheManager\HttpCacheManager.csproj", "{C96845B9-87F7-4090-A198-E72B9F17176C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreExtensions", "CoreExtensions\CoreExtensions.csproj", "{E9A4183D-31A7-4DF5-AE97-67BE6223D89D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogExtensions", "LogExtensions\LogExtensions.csproj", "{0DD4AA78-1217-4A2D-87CC-BFE75044F145}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{440981A2-2828-4DF3-B9CF-F987827995D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{440981A2-2828-4DF3-B9CF-F987827995D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{440981A2-2828-4DF3-B9CF-F987827995D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C96845B9-87F7-4090-A198-E72B9F17176C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96845B9-87F7-4090-A198-E72B9F17176C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96845B9-87F7-4090-A198-E72B9F17176C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96845B9-87F7-4090-A198-E72B9F17176C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9A4183D-31A7-4DF5-AE97-67BE6223D89D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9A4183D-31A7-4DF5-AE97-67BE6223D89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9A4183D-31A7-4DF5-AE97-67BE6223D89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9A4183D-31A7-4DF5-AE97-67BE6223D89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD4AA78-1217-4A2D-87CC-BFE75044F145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD4AA78-1217-4A2D-87CC-BFE75044F145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD4AA78-1217-4A2D-87CC-BFE75044F145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD4AA78-1217-4A2D-87CC-BFE75044F145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
