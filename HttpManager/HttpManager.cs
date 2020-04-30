@@ -48,8 +48,7 @@ namespace PenguinSoft.HttpManager
         {
             ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
             NullValueHandling = NullValueHandling.Ignore,
-            DefaultValueHandling = DefaultValueHandling.Ignore,
-            MaxDepth = 2
+            DefaultValueHandling = DefaultValueHandling.Ignore
         };
 
         private readonly IHttpContextAccessor _contextAccessor;
