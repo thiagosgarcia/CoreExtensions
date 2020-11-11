@@ -6,9 +6,10 @@ namespace PenguinSoft.HttpCacheManager
 {
     public static class CacheManagerExtensions
     {
-        public static IServiceCollection AddCacheManager(this IServiceCollection services, string configSection = "HttpCacheManager")
+        public static IServiceCollection AddHttpCacheManager(this IServiceCollection services, string configSection = "HttpCacheManager")
         {
-            return services.AddSingleton<IHttpCacheManager>(x => new HttpCacheManager(x.GetService<IHttpManager>(), x.GetService<IConfiguration>(), configSection));
+            return services.AddSingleton<IHttpCacheManager>(x => new HttpCacheManager(x.GetService<IHttpManager>(), 
+                x.GetService<IConfiguration>(), configSection));
         }
     }
 }
