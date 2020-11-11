@@ -26,7 +26,7 @@ namespace PenguinSoft.HttpManager
 
             var proxyEnabled = bool.Parse(_configuration["Proxy:Enabled"] ?? "false");
 
-            //One HttpClient per instance int order to reuse it https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/
+            //One HttpClient per instance in order to reuse it https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/
             var instance = proxyEnabled && !ProxyHelper.ShouldBypassProxy(baseUrl, _configuration) ?
                 new HttpClient(ProxyHelper.CreateProxiedHttpClientHandler(_configuration)) :
                 new HttpClient(ProxyHelper.CreateSimpleHttpClientHandler(_configuration));
